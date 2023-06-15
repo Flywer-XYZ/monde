@@ -1,0 +1,19 @@
+{
+  "name": "monde_cont",
+  "version": "1.0.0",
+  "description": "projet de monde contemporain ",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Meunier & Adam Bédard",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-useragent": "^1.0.15",
+    "openai": "^3.2.1"
+  }
+}

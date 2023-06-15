@@ -1,0 +1,138 @@
+:root {
+    --light-green: rgb(195, 225, 195);
+    --top-bar-color: rgb(12, 69, 12);
+}
+@font-face {
+    font-family: valera;
+    src: url(/fonts/VarelaRound-Regular.ttf);
+}
+html {
+    background-color: var(--light-green);
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+#topbar {
+    --margin: 10px;
+    --padding: 4px;
+    position: absolute;
+    padding: 0px var(--padding);
+    margin: var(--margin);
+    width: calc(100% - 2*var(--margin) - 2*var(--padding));
+    height: 35px;
+    background-color: var(--top-bar-color);
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px grey;
+}
+.element {
+    font-size: 16px;
+    position: relative;
+    background-color: rgb(33, 120, 178);
+    box-shadow: 2px 2px 3px rgba(13, 1, 1, 0.364);
+    border: none;
+    height: 25px;
+    width: max-content;
+    top: 5px;
+    left: 0;
+    margin: none;
+    margin-left: 5px;
+    padding: 0px 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    -webkit-tap-highlight-color: none;
+}
+#topbar .element:hover {
+    background-color: rgb(30, 93, 135);
+}
+.tip {
+    position: absolute;
+    height: calc(100vh - 225px);
+    --margin: 10px;
+    --padding: 4px;
+    top: 65px;
+    left: var(--margin);
+    width: calc(100% - 2*var(--margin));
+    border-radius: 10px;
+    color: black;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    overflow-y: scroll;
+}
+.tip div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+.tip div h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12vw;
+    margin: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.tip div p {
+    font-family: valera;
+}
+#infos {
+    position: absolute;
+    height: calc(100vh - 100px);
+    --margin: 10px;
+    --padding: 4px;
+    top: 65px;
+    left: var(--margin);
+    width: calc(100% - 2*var(--margin));
+    border-radius: 10px;
+    color: black;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    overflow-y: scroll;
+}
+#infos h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8vw;
+    margin: 0px;
+}
+#infos p {
+    font-family: valera;
+    text-align: center;
+}
+#infos hr {
+    border: 1px rgb(52, 52, 52) solid;
+    border-radius: 1px;
+}
+.top {
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
+.bottom {
+    position: relative;
+    height: max-content;
+    width: 90%;
+    left: 5%;
+}
+#next {
+    position: absolute;
+    bottom: 10px;
+    width: 90%;
+    left: 5%;
+    border: none;
+    background-color: rgb(81, 161, 81);
+    color: white;
+    border-radius: 15px;
+    height: 30px;
+    font-size: large;
+    -webkit-tap-highlight-color: none;
+}
+#next:active {
+    background-color: rgb(58, 126, 58);
+}
