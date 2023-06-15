@@ -42,7 +42,10 @@ httpServer.listen(80)
 app.get('/', (req, rep) => {
     if(req.useragent.isMobile) {
         rep.writeHead(200, { 'content-type': 'text/html' })
-        fs.createReadStream('./public/html/home.html').pipe(rep)
+        let num = Math.round(Math.random()*5).toString()
+        console.log(num)
+        rep.write(fs.readFileSync('./public/html/home.html').toString().replace('*|*num*|*', Math.round(Math.random()*10).toString()))
+        rep.end()
     } else {
         rep.writeHead(200, { 'content-type': 'text/html' })
         fs.createReadStream('./public/html/nocomp.html').pipe(rep)
